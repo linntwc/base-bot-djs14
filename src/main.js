@@ -23,7 +23,6 @@ client.aliases = new Collection();
 client.slash = new Collection();
 client.categories = fs.readdirSync('./src/normalCommands');
 
-
 dotenv.config()
 
 client.login(process.env.botToken);
