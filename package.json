@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "discord.js": "^13.11.0",
+    "dotenv": "^16.0.3",
+    "mongoose": "^6.3.3"
+  },
+  "name": "twc-bot",
+  "version": "1.0.0",
+  "description": "xd",
+  "main": "botStart.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "twc",
+  "license": "ISC"
+}
