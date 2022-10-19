@@ -1,5 +1,3 @@
-
-
 module.exports = {
     name: "test",
     category: "Test",
