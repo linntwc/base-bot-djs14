@@ -1,5 +1,3 @@
-
-
 module.exports = async (client, interaction) => {
 
    const dbGuild = await client.db.guilds.findOne({_id: interaction.guild.id,});
@@ -31,9 +29,4 @@ module.exports = async (client, interaction) => {
     }
 
   }
-    
-
-        
-
-    }
-
+}
