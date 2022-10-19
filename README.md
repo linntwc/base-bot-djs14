@@ -13,5 +13,5 @@
 🥉 Utilize npm i no terminal para instalar todas libs utilizadas no bot. | Terceiro passo.
 ```
 # 🍁 Após isso ligue o bot com 'node botStart.js'.
-**Dependências utilizadas:** [discord.js](www.npmjs.com/package/discord.js), [dotenv](https://www.npmjs.com/package/dotenv) e [mongoose](https://www.npmjs.com/package/mongoose).
+**Dependências utilizadas:** [discord.js](https://www.npmjs.com/package/discord.js), [dotenv](https://www.npmjs.com/package/dotenv) e [mongoose](https://www.npmjs.com/package/mongoose).
 ## 👥 Créditos: twc#0001.
