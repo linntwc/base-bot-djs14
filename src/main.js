@@ -20,14 +20,15 @@ const client = new Client({
 client.db = new Collection();
 client.commands = new Collection();
 client.aliases = new Collection();
+client.slash = new Collection();
+client.categories = fs.readdirSync('./src/normalCommands');
+
+
 dotenv.config()
 
 client.login(process.env.botToken);
 
-client.once('ready', async () => {
-  client.db.guilds = guildSchema;
-  client.db.users = userSchema;
-});
+client.once('ready', async () => { client.db.guilds = guildSchema; client.db.users = userSchema;});
 
 const indexDb = require('./botDatabase/index.js');
 indexDb.start();
@@ -45,9 +46,9 @@ fs.readdir('./src/botEvents/', (err, eventosPath) => {
         });
     });
   });
-  
-fs.readdirSync('./src/botCommands/normalCommands/').forEach((cmdsPath) => {
-    const botComandos = fs.readdirSync(`./normalCommands/${cmdsPath}`).filter((fileJs) => fileJs.endsWith('.js'));
+
+fs.readdirSync('./src/normalCommands/').forEach((cmdsPath) => {
+    const botComandos = fs.readdirSync(`./src/normalCommands/${cmdsPath}`).filter((fileJs) => fileJs.endsWith('.js'));
   
     for (let fileCmd of botComandos) {
       let acharCmd = require(`./normalCommands/${cmdsPath}/${fileCmd}`);
@@ -57,8 +58,27 @@ fs.readdirSync('./src/botCommands/normalCommands/').forEach((cmdsPath) => {
       }
       if (acharCmd.aliases && Array.isArray(acharCmd.aliases))
         acharCmd.aliases.forEach((x) => client.aliases.set(x, acharCmd.name));
-        console.log(`🐱‍👤 | [Comandos] ${acharCmd.name} carregado.`)
+        console.log(`🍁 | [Comandos Normais] ${acharCmd.name} carregado.`)
     }
-  }); 
+  });
+
+let slashArray = [];
+fs.readdirSync('./src/slashCommands/').forEach((cmdsPath) => {
+    const botComandos = fs.readdirSync(`./src/slashCommands/${cmdsPath}`).filter((fileJs) => fileJs.endsWith('.js'));
+  
+    for (let fileCmd of botComandos) {
+      let acharCmd = require(`./slashCommands/${cmdsPath}/${fileCmd}`);
+  
+      if (acharCmd.name) {
+        client.slash.set(acharCmd.name, acharCmd);
+        slashArray.push(acharCmd)
+        console.log(`💪 | [Comandos Slash] ${acharCmd.name} carregado.`)
+      } else {
+        console.log((`🚨 | [Erro] Falha ao carregar comando ${acharCmd.name}.`));
+        continue;
+    }
+}
+  });
 
 module.exports = client;
+module.exports = slashArray;
