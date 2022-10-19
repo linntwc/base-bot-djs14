@@ -6,7 +6,6 @@ module.exports = async (client, interaction) => {
    if (!dbGuild) await client.db.guilds.create({ _id: interaction.guild.id });
    if (!dbUser) await client.db.users.create({ _id: interaction.user.id });
     
-
    if (interaction.isCommand()) {
     const slashCmd = client.slash.get(interaction.commandName);
     if (!slashCmd) return interaction.reply({ content: 'Ocorreu um erro.'});
