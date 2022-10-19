@@ -21,7 +21,6 @@ client.db = new Collection();
 client.commands = new Collection();
 client.aliases = new Collection();
 client.slash = new Collection();
-client.categories = fs.readdirSync('./src/normalCommands');
 
 dotenv.config()
 
