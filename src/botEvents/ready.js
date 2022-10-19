@@ -9,6 +9,3 @@ module.exports = async (client) => {
 
     console.log(`🤖 | [Bot] Conectado em ${client.user.tag}.\n👥 | [Estatísticas] ${client.guilds.cache.size.toLocaleString()} servidores | ${client.guilds.cache.map(g => g.memberCount).reduce((x, f) => x + f, 0).toLocaleString()} usuários`)
   }
-
-    
-   
