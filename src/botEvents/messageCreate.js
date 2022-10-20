@@ -7,7 +7,7 @@ module.exports = async (client, message) => {
   if (!dbGuild) await client.db.guilds.create({ _id: message.guild.id });
   if (!dbUser) await client.db.users.create({ _id: message.author.id });
 
-  const botPrefixo = !dbGuild ? process.env.PREFIX : dbGuild?.prefix;
+  const botPrefixo = !dbGuild?.prefix ? process.env.PREFIX : dbGuild?.prefix;
 
   if (!message.content.toLowerCase().startsWith(botPrefixo.toLowerCase())) return;
   if (!message.content.startsWith(botPrefixo)) return;
