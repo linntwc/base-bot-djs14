@@ -14,4 +14,4 @@
 ```
 # 🍁 Após isso ligue o bot com 'node botStart.js'.
 **Dependências utilizadas:** [discord.js](https://www.npmjs.com/package/discord.js), [dotenv](https://www.npmjs.com/package/dotenv) e [mongoose](https://www.npmjs.com/package/mongoose).
-## 👥 Créditos: twc#0001.
+## 👥 Créditos: Linn#0002.
