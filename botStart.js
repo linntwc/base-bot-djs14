@@ -1,4 +1,4 @@
-c oon sole.lcear()
+console.clear()
 require('./src/main.js');
 require('./src/botUtils/antiCrash.js');
-consol e.log('🎾 | [Anti-Crash] Carregado com sucesso.')
+console.log('🎾 | [Anti-Crash] Carregado com sucesso.')
