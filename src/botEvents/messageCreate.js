@@ -1,6 +1,8 @@
-module.exports = async (client, message) => {
-  if (message.author.bot || message.channel.type == "DM") return;
+const { ChannelType } = require('discord.js');
 
+module.exports = async (client, message) => {
+  if (message.author.bot || message.channel.type == ChannelType.DM) return;
+  
   const dbGuild = await client.db.guilds.findOne({_id: message.guild.id,});
   const dbUser = await client.db.users.findOne({_id: message.author.id,});
 
@@ -24,5 +26,4 @@ module.exports = async (client, message) => {
   } catch (err) {
     console.error("🚨 | [Erro] " + err);
   }
-
 }
