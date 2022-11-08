@@ -1,4 +1,4 @@
-const { Intents, Client, Collection } = require('discord.js');
+const { GatewayIntentBits, Partials, Collection, Client } = require('discord.js');
 const guildSchema = require('./botDatabase/dbSchemas/Guild.js');
 const userSchema = require('./botDatabase/dbSchemas/User.js');
 const dotenv = require('dotenv');
@@ -6,15 +6,14 @@ const fs = require('fs');
 
 const client = new Client({
   intents: [
-    Intents.FLAGS.GUILDS,
-    Intents.FLAGS.GUILD_MESSAGES,
-    Intents.FLAGS.GUILD_VOICE_STATES,
-    Intents.FLAGS.GUILD_PRESENCES,
-    Intents.FLAGS.GUILD_MEMBERS,
-    Intents.FLAGS.DIRECT_MESSAGES,
-    Intents.FLAGS.GUILD_PRESENCES
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.MessageContent,
+    GatewayIntentBits.GuildPresences,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.GuildMembers,
+    GatewayIntentBits.DirectMessages
   ],
-  partials: ['CHANNEL','MESSAGE']
+  partials: [Partials.Channel, Partials.Message]
 });
 
 client.db = new Collection();
