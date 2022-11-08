@@ -1,17 +1,27 @@
-# 🤖 Base de bot feito em Discord.JS (v13).
+# 🤖 Base de bot feita em Discord.JS (v14).
 
 ```
 💻 Suporte a Slash Commands e comandos por Prefixo.
 🍀 Conexão com banco de dados MongoDB.
+💠 Feita completamente na "nova" versão da lib Discord.js, então está completamente atualizada.
 ```
-### Source bem simples e fácil de usar, até pra uma criança de 12 anos.
+### Source bem simples e fácil de usar. Mesmo que você seja burro.
 
-# 💁‍♀️ Como utilizar? 
+# 🏡 Como faço pra usar?
 ```
-🥇 git clone https://github.com/twcln/djs-v13-bot | Primeiro passo.
-🥈 Renomeie o arquivo .exemplo .env para .env e altere todas informações que estão lá. | Segundo passo.
-🥉 Utilize npm i no terminal para instalar todas libs utilizadas no bot. | Terceiro passo.
+・Crie uma pasta e baixe os arquivos do projeto. | Primeiro passo.
+・Renomeie o arquivo .exemplo .env para .env e altere todas informações que estão lá. | Segundo passo.
+・Utilize npm i no terminal para instalar todas libs utilizadas no bot. | Terceiro passo.
+・Rode o bot utilizando 'node botStart.js'. | Último passo.
 ```
-# 🍁 Após isso ligue o bot com 'node botStart.js'.
-**Dependências utilizadas:** [discord.js](https://www.npmjs.com/package/discord.js), [dotenv](https://www.npmjs.com/package/dotenv) e [mongoose](https://www.npmjs.com/package/mongoose).
-## 👥 Créditos: Linn#0002.
+
+## 🚨 No arquivo .env, preencha as informações da seguinte forma:
+```
+botToken: Token do bot que você criou no Portal de Desenvolvedores do Discord.
+mongoUrl: Seu link para se conectar com a MongoDB.
+botPrefix: Prefixo que o bot usará para responder os comandos.
+```
+
+# 🏆 Créditos:
+
+**[Linn#0002](https://discord.gg/nayeon)** (Criador do código) e **[Natalia#0002](https://github.com/nataliagomes2)** (Implorou pra eu fazer).
