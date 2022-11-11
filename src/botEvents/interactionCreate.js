@@ -14,9 +14,9 @@ module.exports = async (client, interaction) => {
     
     for (let optionCmd of interaction.options.data) {
         if (optionCmd.type === 'SUB_COMMAND') {
-            if (optionCmd.name) args.push(optionCmd.name);
+            if (optionCmd.name) argsCmd.push(optionCmd.name);
             optionCmd.options?.forEach(x => {
-                if (x.value) args.push(x.value);
+                if (x.value) argsCmd.push(x.value);
             });
         } else if (optionCmd.value) args.push(optionCmd.value);
     }
