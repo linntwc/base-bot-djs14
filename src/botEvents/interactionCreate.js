@@ -18,7 +18,7 @@ module.exports = async (client, interaction) => {
             optionCmd.options?.forEach(x => {
                 if (x.value) argsCmd.push(x.value);
             });
-        } else if (optionCmd.value) args.push(optionCmd.value);
+        } else if (optionCmd.value) argsCmd.push(optionCmd.value);
     }
     
     try {
