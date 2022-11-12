@@ -5,7 +5,7 @@
 🍀 Conexão com banco de dados MongoDB.
 💠 Feita completamente na "nova" versão da lib Discord.js, então está completamente atualizada.
 ```
-### Source bem simples e fácil de usar. Mesmo que você seja burro.
+### Source bem simples e fácil de usar. Mesmo que você não seja muito inteligente.
 
 # 🏡 Como faço pra usar?
 ```
