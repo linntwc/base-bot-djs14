@@ -24,4 +24,4 @@ botPrefix: Prefixo que o bot usará para responder os comandos.
 
 # 🏆 Créditos:
 
-**[Linn#0002](https://discord.gg/nayeon)** (Criador do código) e **[Natalia#0002](https://github.com/nataliagomes2)** (Implorou pra eu fazer).
+**[Linn#0001](https://discord.gg/nayeon)** (Criador do código) e **[Natalia#0002](https://github.com/nataliagomes2)** (Implorou pra eu fazer).
